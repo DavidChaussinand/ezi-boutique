@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Nous contacter :ezi {% endblock %}
+
+
+{% block navbar %}
+     {{ include ('layout/othernavbar.html.twig')}}
+{% endblock %}
+
+{% block content  %}
+
+
+<h1 class="text-center"> Nous contacter</h1>
+<br><br>
+
+{% for message in app.flashes('notice') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
+    {{ form(form)}}
+
+{% endblock %}

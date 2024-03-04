@@ -1,0 +1,189 @@
+.header-background {
+    background-image: url('../image/LANCOME.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh;
+    
+  }
+
+
+
+
+
+  .bg-body-tertiary {
+    --bs-bg-opacity: 0.1;
+    background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
+}
+
+.navbar.bg-body-tertiary .nav-link {
+  color: white !important;
+  font-size: 1.3em; /* ou la taille spécifique que vous préférez */
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 1.5em; /* ou la taille spécifique que vous préférez */
+}
+.navbar.bg-body-tertiary .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+.content-container {
+  width: 80%;
+  margin: 0 auto; /* Centrer le conteneur */
+  padding: 20px; /* Ajouter un peu de marge intérieure si nécessaire */
+}
+
+.cart-icon{
+  height: 20px;
+  padding-left: 2px;
+}
+
+
+
+/* ----------------------section carte------------------------------ */
+
+.container_lieux_vente {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container_lieux_vente h2 {
+  color: #4a4a4a;
+}
+
+.container_lieux_vente h5 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #6a6a6a;
+}
+
+.container_lieux_vente_carte {
+  width: auto;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center; /* Centre le contenu */
+  align-items: center; /* Alignement vertical */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante sur les petits écrans */
+  max-width: 1200px; /* Limite la largeur maximale de la carte */
+  margin: auto; /* Centre la carte horizontalement */
+  
+}
+
+.large400 {
+  position: relative;
+  margin: 0 auto;
+  width: 450px; /* défini pour correspondre à la taille de l'image */
+}
+
+.large400 > img {
+  width: 450px;
+  height: 450px;
+  border: 1px solid #ccc;
+}
+
+.ville {
+  position: absolute;
+  padding: 5px 10px;
+  cursor: pointer;
+  /* Les positions spécifiques pour Valence et Montelimar doivent être ajustées ici */
+}
+
+.valence {
+  
+  left: 241px;
+  top: 159px;
+  z-index: 1;
+}
+
+.montelimar {
+  
+  left: 214px;
+  top: 258px;
+  z-index: 1;
+}
+/* Styles pour le conteneur des informations de la ville */
+.container_lieux_vente_carte_description {
+  background-color: #f8f9fa; /* Fond clair */
+  border: 1px solid #ddd; /* Bordure subtile */
+  border-radius: 8px; /* Bords arrondis */
+  padding: 20px; /* Espace intérieur */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère pour la profondeur */
+  margin-top: 20px; /* Espacement au-dessus du conteneur */
+  width: 450px; /* Largeur maximale */
+  
+  margin-left: auto; /* Centrer le conteneur */
+  margin-right: auto;
+}
+
+/* Styles pour le titre de la ville */
+.ville-titre {
+  font-size: 24px; /* Taille de police plus grande */
+  color: #333; /* Couleur de texte foncée */
+  margin-bottom: 15px; /* Espacement sous le titre */
+  text-align: center; /* Centrer le titre */
+}
+
+/* Styles pour la liste des adresses */
+.ville-adresses {
+  list-style: none; /* Enlever les puces */
+  padding: 0; /* Enlever le padding */
+  margin: 0; /* Enlever la marge */
+}
+
+/* Styles pour chaque adresse */
+.ville-adresse {
+  background-color: #fff; /* Fond blanc */
+  border: 1px solid #eee; /* Bordure subtile */
+  border-radius: 5px; /* Bords arrondis */
+  padding: 10px; /* Espace intérieur */
+  margin-bottom: 10px; /* Espacement entre les adresses */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Ombre légère */
+  font-size: 16px; /* Taille de police adaptée */
+}
+
+
+
+
+#infoVille {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: none;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#infoVille h3 {
+  color: #4a90e2;
+}
+
+#infoVille p {
+  color: #666;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+
+.order-summary{
+  background-color: #a9c3f1;
+  padding: 20px;
+  margin-top:22px ;
+
+}
+
+
+
+
+
+
+

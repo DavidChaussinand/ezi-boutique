@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Page introuvable {% endblock %}
+
+
+{% block navbar %}
+     {{ include ('layout/othernavbar.html.twig')}}
+{% endblock %}
+
+{% block body  %}
+<h2>Cette page n'existe pas.</h2>
+
+<a href="{{ path('app_home') }}" class="btn btn-info mt-5">Revenir à l'accueil</a>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PointOfSaleController!{% endblock %}
+{% block navbar %}
+     {{ include ('layout/othernavbar.html.twig')}}
+{% endblock %}
+
+
+{% block body %}
+
+    <section class="container_lieux_vente">
+        <h2> Nos lieux de vente : </h2>
+        <br><br>
+        <h5> Cliquez sur votre ville pour afficher les adresses. </h5>
+        <article class=" container_lieux_vente_carte">
+            
+                <div class="large400">
+
+                    <img src="{{ asset('image/carte_vierge.png') }}" alt="carte de Drome , Ardeche">
+                    
+                        <p class="absolute montelimar ville" id="montelimar"> Montelimar </p>
+                        <p class="absolute valence ville" id="valence"> Valence </p>
+                    
+                </div>
+
+                <div id="infoVille" style="display:none;">
+                    <h3 id="nomVille"></h3>
+                    <div id="adresses"></div>
+                </div>
+
+              
+            
+    
+        </article>
+
+
+    </section>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('javascript/lieu_vente.js') }}"></script>
+{% endblock %}
