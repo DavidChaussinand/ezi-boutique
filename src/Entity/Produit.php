@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProduitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -44,6 +46,19 @@ class Produit
 
     #[ORM\Column]
     private ?bool $isBest = null;
+
+    #[ORM\OneToMany(mappedBy: 'produit', targetEntity: Comment::class, orphanRemoval: true)]
+    private Collection $comments;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
+
+    public function __construct()
+    {
+        $this->comments = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -166,6 +181,36 @@ class Produit
     public function setIsBest(bool $isBest): static
     {
         $this->isBest = $isBest;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Comment>
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    public function addComment(Comment $comment): static
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments->add($comment);
+            $comment->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Comment $comment): static
+    {
+        if ($this->comments->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getProduit() === $this) {
+                $comment->setProduit(null);
+            }
+        }
 
         return $this;
     }

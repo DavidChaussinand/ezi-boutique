@@ -27,6 +27,32 @@
                 </div>
             </div>
 
+            <br><br><br>
+            
+            <a class="mt-3 mb-3" href="{{ path('app_comment_new', {'slug': product.slug}) }}">Ajouter un avis</a>
+            <br><br>
+            <hr>
+
+            <div>
+                <h3>Les avis</h3>
+                <div>
+                    {% if comments|length > 0 %}
+                        {% for comment in comments %}
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    {{ comment.user.firstname }}
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">{{ comment.content }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>Soyez la première personne à laisser un avis sur ce produit !</p>
+                    {% endif %}
+                </div>
+            </div>
+
 
 </div>
 

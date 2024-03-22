@@ -39,6 +39,7 @@ class ProductController extends AbstractController
     {   
         
         $product = $this->entityManager->getRepository(Produit::class)->findOneBySlug($slug);
+        $comments= $product->getComments();
 
         if(!$product){
             return $this->redirectToRoute('app_products');
@@ -47,6 +48,7 @@ class ProductController extends AbstractController
         return $this->render('product/show.html.twig', [
             'controller_name' => 'ProductController',
             'product'=> $product,
+            'comments'=> $comments,
         ]);
     }
 }
